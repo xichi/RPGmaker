@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <canvasControl/>
+    <canvasControl :hero="hero"/>
+    <button @click="charC">改变人物</button>
   </div>
 </template>
 
@@ -8,9 +9,21 @@
 import canvasControl from './components/canvasControl.vue'
 export default {
   name: 'app',
+  data(){
+    return{
+       hero: {
+          id: 2
+       },
+    }
+  },
   components: {
     canvasControl
   },
+  methods:{
+    charC(){
+       
+    }
+  }
 }
 </script>
 
