@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <canvasControl :hero="hero"/>
+    <canvasControl :heroId="heroId"/>
     <button @click="charC">改变人物</button>
   </div>
 </template>
@@ -11,9 +11,7 @@ export default {
   name: 'app',
   data(){
     return{
-       hero: {
-          id: 2
-       },
+      heroId: 1
     }
   },
   components: {
@@ -21,7 +19,7 @@ export default {
   },
   methods:{
     charC(){
-       
+       this.heroId = ( this.heroId + 1 )%10
     }
   }
 }
